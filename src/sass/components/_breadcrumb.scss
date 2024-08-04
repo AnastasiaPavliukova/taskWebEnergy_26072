@@ -1,0 +1,48 @@
+@charset "UTF-8";
+@use '../vars';
+
+.breadcrumb {
+    align-self: flex-start;
+    margin: 39px 0 50px;
+
+    &__mobile {
+        display: none;
+    }
+
+    &__desk {
+        display: flex;
+        gap: 6px;
+    }
+
+    &__link {
+        font-size: 14px;
+        line-height: 18px;
+        color: vars.$grey-text-color;
+    }
+}
+
+
+@media screen and (max-width: 1300px) {
+
+    .breadcrumb {
+
+        &__desk {
+            display: none;
+        }
+
+        &__mobile {
+            display: flex;
+        }
+
+        &__link-back {
+            font-size: 16px;
+            line-height: 130%;
+            color: vars.$accent-red-color;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+
+    }
+}

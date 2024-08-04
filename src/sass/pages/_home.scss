@@ -1,0 +1,16 @@
+@charset "UTF-8";
+@use '../vars';
+
+body {
+    background-color: vars.$white-color;
+}
+
+.inner {
+    width: 100%;
+    min-width: 320px;
+    max-width: 1300px;
+    padding: 0 10px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}

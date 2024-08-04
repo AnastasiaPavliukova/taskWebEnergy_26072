@@ -1,0 +1,210 @@
+@charset "UTF-8";
+@use '../vars';
+
+.footer {
+    word-break: 100%;
+    background: vars.$footer-bg-color;
+    border-top: 1px solid vars.$card-border-color;
+}
+
+.footer {
+    &__inner {
+        padding: 0 10px;
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+
+    &__wrapper {
+        width: 100%;
+        padding: 52px 0 50px;
+        display: flex;
+    }
+
+    &__contacts {
+        width: 320px;
+        display: block;
+        order: 1;
+    }
+
+    &__contact-tel {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 26px;
+        color: vars.$btn-grey-color;
+        margin-bottom: 6px;
+    }
+
+    &__primary-text {
+        display: block;
+        font-size: 14px;
+        line-height: 16px;
+        color: vars.$primary-color;
+    }
+
+    &__contact-mail {
+        display: block;
+        font-size: 14px;
+        line-height: 18px;
+        color: vars.$btn-grey-color;
+        margin: 21px 0 22px;
+    }
+
+    &__contact-price {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        margin-top: 31px;
+    }
+
+    &__links {
+        width: 640px;
+        height: 247px;
+        order: 2;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    &__links-item {
+        width: 100%;
+        max-width: 232px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 130%;
+        color: vars.$light-grey-color;
+        text-transform: uppercase;
+    }
+
+    &__links-item-red {
+        color: vars.$accent-red-color;
+    }
+
+    &__feedback {
+        width: 320px;
+        order: 3;
+    }
+
+    &__feedback-title {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 130%;
+        color: vars.$btn-grey-color;
+        margin-bottom: 30px;
+    }
+
+    &__feedback-email {
+        width: 298px;
+        height: 40px;
+        padding: 0 20px;
+        background: vars.$white-color;
+        border-radius: 4px;
+        border: 1px solid vars.$card-border-color;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    &__feedback-input {
+        border: none;
+        outline: none;
+        width: 90%;
+    }
+
+    &__feedback-input::placeholder {
+        font-size: 16px;
+        line-height: 100%;
+        color: vars.$light-grey-color;
+    }
+
+    &__feedback-input:focus {
+        color: vars.$grey-text-color;
+    }
+
+    &__feedback-input:focus::placeholder {
+        color: rgba(vars.$light-grey-color, 0.5);
+    }
+
+    &__feedback-img {
+        width: 24px;
+        height: 24px;
+    }
+
+    &__feedback-privacy {
+        display: flex;
+        gap: 10px;
+    }
+
+    &__feedback-privacy-check {
+        width: 13px;
+        height: 13px;
+    }
+
+    &__feedback-privacy-info {
+        font-size: 12px;
+        line-height: 130%;
+        color: vars.$light-grey-color;
+    }
+
+}
+
+.footer-privacy {
+    width: 100%;
+    padding: 30px 0 38px;
+    border-top: 1px solid vars.$card-border-color;
+}
+
+.footer-privacy {
+    &__copyright {
+        font-size: 14px;
+        line-height: 18px;
+        color: vars.$black-color;
+        margin-bottom: 8px;
+    }
+
+    &__message {
+        font-size: 14px;
+        line-height: 18px;
+        font-weight: 300;
+        color: vars.$btn-grey-color;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+
+    .footer {
+
+        &__inner {
+            padding: 0 0 !important;
+        }
+
+        &__wrapper {
+            flex-direction: column;
+        }
+
+        &__links {
+            order: 1;
+            width: 100%;
+            height: auto;
+            padding: 0 10px 20px;
+            border-bottom: 1px solid vars.$card-border-color;
+        }
+
+        &__links-item-red {
+            order: 2;
+        }
+
+        &__contacts {
+            width: 100%;
+            order: 2;
+            padding: 20px 10px 30px;
+        }
+
+        &__feedback {
+            width: 100%;
+            order: 3;
+            padding: 0 10px;
+        }
+    }
+}

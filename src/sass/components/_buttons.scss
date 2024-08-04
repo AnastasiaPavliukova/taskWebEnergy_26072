@@ -1,0 +1,61 @@
+@charset "UTF-8";
+@use '../vars';
+
+.btn {
+    border: none;
+    background: transparent;
+    border-radius: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-filter {
+    padding: 8px;
+    border-radius: 2px;
+    border: 1px solid vars.$filter-btn-bg;
+    background: vars.$footer-bg-color;
+    font-size: 12px;
+    line-height: 14px;
+    color: vars.$btn-grey-color;
+}
+
+.btn-filter:hover {
+    background: vars.$accent-red-color;
+    border: 1px solid vars.$accent-red-color;
+    color: vars.$white-color;
+}
+
+.btn-filter {
+    &__wrap-btn {
+        background: vars.$white-color;
+        border: 1px solid vars.$accent-red-color;
+    }
+
+    &__wrap-btn:hover {
+        background: vars.$white-color;
+        color: vars.$accent-red-color;
+    }
+}
+
+.btn-see-all {
+    width: 216px;
+    height: 50px;
+    padding: 12px;
+    border: 2px solid vars.$accent-red-color;
+    border-radius: 2px;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 500;
+    color: vars.$accent-red-color;
+}
+
+.btn-reset-filters {
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 400;
+    color: vars.$accent-red-color;
+}

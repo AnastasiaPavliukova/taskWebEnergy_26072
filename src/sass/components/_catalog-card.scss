@@ -1,0 +1,112 @@
+@charset "UTF-8";
+@use "../vars";
+
+
+.catalog-card {
+    padding: 1.25rem;
+    border-top: 1px solid vars.$card-border-color;
+    border-right: 1px solid vars.$card-border-color;
+    transition: all 0.3s ease;
+}
+
+.catalog-card:hover {
+    box-shadow: 0px 0px 20px rgba(37, 40, 43, 0.2);
+}
+
+.catalog-card {
+
+    &__img {
+        width: 100%;
+        height: auto;
+    }
+
+    &__article {
+        font-size: 14px;
+        line-height: 18px;
+        color: vars.$light-grey-color;
+        margin: 24px 0 8px;
+    }
+
+    &__name {
+        font-size: 14px;
+        line-height: 18px;
+        color: vars.$dark-text-color;
+        margin-bottom: 14px;
+    }
+
+    &__price {
+        display: flex;
+        align-items: end;
+        flex-wrap: wrap;
+    }
+
+    &__btns {
+        width: 100%;
+        height: 36px;
+        display: flex;
+        gap: 20px;
+        margin-top: 20px;
+    }
+}
+
+.price-wholesale {
+    font-size: 18px;
+    line-height: 23px;
+    color: vars.$accent-blue-color;
+}
+
+.price-retail {
+    font-size: 18px;
+    line-height: 23px;
+    font-weight: 500;
+    color: vars.$accent-red-color;
+}
+
+.btn {
+    &__add-to-cart {
+        width: 100%;
+        max-width: 204px;
+        min-width: 148px;
+        padding: 12px 12px;
+        border: 1px solid vars.$light-grey-color;
+        border-radius: 2px;
+        font-size: 16px;
+        line-height: 16px;
+        color: vars.$dark-text-color;
+    }
+
+    &__add-to-cart:hover {
+        background: vars.$accent-red-color;
+        border: 1px solid vars.$accent-red-color;
+        color: vars.$white-color;
+    }
+
+    &__add-to-wishlist {
+        padding: 12px 12px;
+        border: 1px solid vars.$light-grey-color;
+        border-radius: 2px;
+    }
+
+    &__add-to-wishlist:hover {
+        background: vars.$accent-red-color;
+        border: 1px solid vars.$primary-color;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+
+    .catalog-card {
+        padding: 1rem;
+
+        &__btns {
+            width: 100%;
+            height: 40px;
+        }
+    
+    }
+    .price-wholesale {
+        font-size: 16px;
+        margin-right: 16px;
+    }
+
+}

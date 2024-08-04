@@ -1,0 +1,46 @@
+@charset "UTF-8";
+@use '../vars';
+
+body {
+    font: 100% vars.$font-family;
+    font-weight: 400;
+}
+
+.title {
+    text-transform: uppercase;
+    align-self: flex-start;
+}
+
+.h1 {
+    font-size: clamp(1.25rem, 2.5vw, 2rem);
+    line-height: 42px;
+    font-weight: 400;
+    color: vars.$dark-text-color;
+    margin-bottom: 30px;
+}
+
+.h4 {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 130%;
+    color: vars.$dark-text-color;
+}
+
+.h6 {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 130%;
+    color: vars.$dark-text-color;
+}
+
+.grey-light-text {
+    color: vars.$grey-text-color;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.primary-light-text {
+    color: vars.$primary-color;
+    font-size: 12px;
+    line-height: 16px;
+}

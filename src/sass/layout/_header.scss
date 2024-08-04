@@ -1,0 +1,16 @@
+@charset "UTF-8";
+@use '../vars';
+
+
+.header {
+    &__inner {
+        flex-direction: column;
+        margin-bottom: 10px !important;
+    }
+}
+
+.filters-btn__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px
+}

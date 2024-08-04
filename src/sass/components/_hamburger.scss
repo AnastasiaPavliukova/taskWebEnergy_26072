@@ -1,0 +1,39 @@
+@charset "UTF-8";
+@use '../vars';
+
+.hamburger {
+    width: 24px;
+    height: 24px;
+    padding: 3px !important;
+}
+
+.hamburger-box {
+    width: 18px !important;
+    height: 18px !important;
+}
+
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+    width: 18px !important;
+    height: 2px !important;
+    background: vars.$white-color !important;
+}
+
+.hamburger-inner::before {
+    top: -6px !important;
+}
+
+.hamburger-inner::after {
+    bottom: -6px !important; 
+}
+
+.hamburger--squeeze.is-active .hamburger-inner::before{
+    top: 0 !important;
+    width: 18px !important;
+}
+
+.hamburger--squeeze.is-active .hamburger-inner::after {
+    bottom: 0 !important;
+    width: 18px !important;
+}
