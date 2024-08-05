@@ -129,7 +129,7 @@
         z-index: 150;
 
         &__wrapper {
-            display: none;
+            display: flex;
             position: fixed;
             z-index: 100;
             top: 0;
@@ -138,6 +138,8 @@
             bottom: 0;
             align-items: center;
             flex: initial;
+            transition: all 0.3s ease-out;
+            transform: translateX(-1000px);
         }
 
         &__overlay {
