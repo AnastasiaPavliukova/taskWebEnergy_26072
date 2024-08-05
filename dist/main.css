@@ -658,7 +658,7 @@ body {
     z-index: 150;
   }
   .filters-sidebar__wrapper {
-    display: flex;
+    display: none;
     position: fixed;
     z-index: 100;
     top: 0;
@@ -667,8 +667,6 @@ body {
     bottom: 0;
     align-items: center;
     flex: initial;
-    transition: all 0.3s ease-out;
-    transform: translateX(-1000px);
   }
   .filters-sidebar__overlay {
     display: flex;

@@ -7,18 +7,17 @@ const filtersOpenOverlay = document.querySelector('.filters-sidebar__overlay');
 const filtersBackBtn = document.querySelector('.filters-sidebar__back');
 
 filtersOpenBtn.addEventListener('click', () => {
-    filtersSidebar.style.transform = 'translateX(0)'
+    filtersSidebar.style.display = 'flex';
 });
 
 filtersCloseBtn.addEventListener('click', () => {
-   filtersSidebar.style.transform = 'translateX(-1000px)'
-    
+    filtersSidebar.style.display = 'none';
 });
 
 filtersOpenOverlay.addEventListener('click', () => {
-    filtersSidebar.style.transform = 'translateX(-1000px)'
+    filtersSidebar.style.display = 'none';
 });
 
 filtersBackBtn.addEventListener('click', () => {
-   filtersSidebar.style.transform = 'translateX(-1000px)'
+    filtersSidebar.style.display = 'none';
 });
