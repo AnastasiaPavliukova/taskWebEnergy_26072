@@ -149,13 +149,13 @@
                 </div>
 
                 <div class="catalog__content">
-                    <div class="filters-sidebar__wrapper">
+                    <div id="filters_sidebar" class="filters-sidebar__wrapper">
                         <div class="filters-sidebar__overlay"></div>
                         <div class="filters-sidebar">
                             <div class="filters-sidebar__heading">
-                                <img class="breadcrumb__img" src="images/svg/chevron.svg" alt="стрелка назад" />
+                                <img class="breadcrumb__img filters-sidebar__back" src="images/svg/chevron.svg" alt="стрелка назад" />
                                 <h4 class="h4">Фильтр</h4>
-                                <button class="btn filters-sidebar__btn-close"><img
+                                <button id="filters_close" class="btn filters-sidebar__btn-close"><img
                                         class="filters-sidebar__btn-close-img" src="images/svg/filters-close-mob.svg"
                                         alt="закрыть фильтры" />
                                 </button>
@@ -976,6 +976,7 @@
         </div>
     </div>
 
+    <script type="text/javascript" src="main.js"></script>
     <script type="text/javascript" src="select-custom.js"></script>
     <script type="text/javascript" src="modal.js"></script>
 </body>

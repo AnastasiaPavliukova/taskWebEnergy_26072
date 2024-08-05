@@ -682,6 +682,9 @@ body {
     gap: 10px;
     margin-bottom: 32px;
   }
+  .filters-sidebar__back {
+    cursor: pointer;
+  }
   .filters-sidebar__btn-close {
     width: 52px;
     height: 50px;
