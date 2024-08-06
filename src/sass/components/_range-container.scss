@@ -51,26 +51,30 @@ input[type=range]::-webkit-slider-thumb:active {
 }
 
 .form_control_container {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
-}
-
-input[type="number"] {
   width: 92px;
   height: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
   padding: 8px 10px;
   background: vars.$white-color;
   border: 1px solid vars.$filter-btn-bg;
   font-size: 14px;
-  line-height: 14px;
-  color: vars.$grey-text-color;
+  line-height: 100%;
+  color: vars.$black-color;
 }
 
-input[type="number"]::placeholder {
+input[type="number"] {
   font-size: 14px;
   line-height: 14px;
-  color: vars.$black-color;
+  color: vars.$grey-text-color;
+  border: none;
+  margin-left: 4px;
+}
+
+input[type="number"]:focus {
+  outline: none;
 }
 
 input[type="range"] {
@@ -86,4 +90,5 @@ input[type="range"] {
 #fromSlider {
   height: 0;
   z-index: 1;
+  margin-top: 2px;
 }

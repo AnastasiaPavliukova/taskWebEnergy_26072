@@ -471,7 +471,7 @@ body {
   width: 100%;
   height: auto;
 }
-.catalog-card__code {
+.catalog-card__article {
   font-size: 14px;
   line-height: 18px;
   color: #A0A4A8;
@@ -856,26 +856,30 @@ input[type=range]::-webkit-slider-thumb:active {
 }
 
 .form_control_container {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
-}
-
-input[type=number] {
   width: 92px;
   height: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
   padding: 8px 10px;
   background: #fff;
   border: 1px solid #CACCCF;
   font-size: 14px;
-  line-height: 14px;
-  color: #828282;
+  line-height: 100%;
+  color: #000;
 }
 
-input[type=number]::placeholder {
+input[type=number] {
   font-size: 14px;
   line-height: 14px;
-  color: #000;
+  color: #828282;
+  border: none;
+  margin-left: 4px;
+}
+
+input[type=number]:focus {
+  outline: none;
 }
 
 input[type=range] {
@@ -891,6 +895,7 @@ input[type=range] {
 #fromSlider {
   height: 0;
   z-index: 1;
+  margin-top: 2px;
 }
 
 .modal {
@@ -1127,6 +1132,7 @@ input[type=range] {
   display: flex;
   gap: 8px;
   align-items: center;
+  cursor: pointer;
 }
 .navbar__btn-catalog {
   display: block;
