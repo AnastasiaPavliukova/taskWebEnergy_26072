@@ -153,7 +153,8 @@
                         <div class="filters-sidebar__overlay"></div>
                         <div class="filters-sidebar">
                             <div class="filters-sidebar__heading">
-                                <img class="breadcrumb__img filters-sidebar__back" src="images/svg/chevron.svg" alt="стрелка назад" />
+                                <img class="breadcrumb__img filters-sidebar__back" src="images/svg/chevron.svg"
+                                    alt="стрелка назад" />
                                 <h4 class="h4">Фильтр</h4>
                                 <button id="filters_close" class="btn filters-sidebar__btn-close"><img
                                         class="filters-sidebar__btn-close-img" src="images/svg/filters-close-mob.svg"
@@ -173,16 +174,16 @@
                                         <div class="form_control">
                                             <div class="form_control_container">от
                                                 <input class="form_control_container__time__input" type="number"
-                                                    id="fromInput" value="100" min="0" max="10000" />
+                                                    id="fromInput" value="900" min="900" max="15000" step="100"/>
                                             </div>
                                             <div class="form_control_container">до
                                                 <input class="form_control_container__time__input" type="number"
-                                                    id="toInput" value="4000" min="0" max="10000" />
+                                                    id="toInput" value="15000" min="900" max="15000" step="100"/>
                                             </div>
                                         </div>
                                         <div class="sliders_control">
-                                            <input id="fromSlider" type="range" value="100" min="0" max="10000" />
-                                            <input id="toSlider" type="range" value="4000" min="0" max="10000" />
+                                            <input id="fromSlider" type="range" value="900" min="900" max="15000" step="100"/>
+                                            <input id="toSlider" type="range" value="15000" min="900" max="15000" step="100"/>
                                         </div>
                                     </div>
                                 </details>
@@ -198,26 +199,27 @@
                                     </summary>
                                     <div class="item-choice">
                                         <input class="item-choice__checkbox" type="checkbox" id="trousers"
-                                            name="trousers" />
+                                            name="trousers" data-filter-category="type" data-filter-value="1" />
                                         <label class="item-choice__label" for="trousers">Брюки</label>
                                     </div>
                                     <div class="item-choice">
-                                        <input class="item-choice__checkbox" type="checkbox" id="vest" name="vest" />
+                                        <input class="item-choice__checkbox" type="checkbox" id="vest" name="vest"
+                                            data-filter-category="type" data-filter-value="2" />
                                         <label class="item-choice__label" for="vest">Жилет</label>
                                     </div>
                                     <div class="item-choice">
-                                        <input class="item-choice__checkbox" type="checkbox" id="costume"
-                                            name="costume" />
+                                        <input class="item-choice__checkbox" type="checkbox" id="costume" name="costume"
+                                            data-filter-category="type" data-filter-value="3" />
                                         <label class="item-choice__label" for="costume">Костюм</label>
                                     </div>
                                     <div class="item-choice">
-                                        <input class="item-choice__checkbox" type="checkbox" id="jacket"
-                                            name="jacket" />
+                                        <input class="item-choice__checkbox" type="checkbox" id="jacket" name="jacket"
+                                            data-filter-category="type" data-filter-value="4" />
                                         <label class="item-choice__label" for="jacket">Куртка</label>
                                     </div>
                                     <div class="item-choice">
                                         <input class="item-choice__checkbox" type="checkbox" id="overalls"
-                                            name="overalls" />
+                                            name="overalls" data-filter-category="type" data-filter-value="5" />
                                         <label class="item-choice__label" for="overalls">Полукомбинезон</label>
                                     </div>
                                 </details>
@@ -232,8 +234,8 @@
                                         </div>
                                     </summary>
                                     <div class="item-choice">
-                                        <input class="item-choice__checkbox" type="checkbox" id="winter"
-                                            name="winter" />
+                                        <input class="item-choice__checkbox" type="checkbox" id="winter" name="winter"
+                                            data-filter-category="season" data-filter-value="1" />
                                         <label class="item-choice__label" for="winter">Зима</label>
                                     </div>
                                 </details>
@@ -248,8 +250,8 @@
                                         </div>
                                     </summary>
                                     <div class="item-choice">
-                                        <input class="item-choice__checkbox" type="checkbox" id="sirius"
-                                            name="sirius" />
+                                        <input class="item-choice__checkbox" type="checkbox" id="sirius" name="sirius"
+                                            data-filter-category="brand" data-filter-value="1" />
                                         <label class="item-choice__label" for="sirius">СИРИУС</label>
                                     </div>
                                 </details>
@@ -264,17 +266,18 @@
                                         </div>
                                     </summary>
                                     <div class="item-choice">
-                                        <input class="item-choice__checkbox" type="checkbox" id="female"
-                                            name="female" />
+                                        <input class="item-choice__checkbox" type="checkbox" id="female" name="female"
+                                            data-filter-category="sex" data-filter-value="1" />
                                         <label class="item-choice__label" for="female">Женский</label>
                                     </div>
                                     <div class="item-choice">
-                                        <input class="item-choice__checkbox" type="checkbox" id="male" name="male" />
+                                        <input class="item-choice__checkbox" type="checkbox" id="male" name="male"
+                                            data-filter-category="sex" data-filter-value="2" />
                                         <label class="item-choice__label" for="male">Мужской</label>
                                     </div>
                                     <div class="item-choice">
-                                        <input class="item-choice__checkbox" type="checkbox" id="unisex"
-                                            name="unisex" />
+                                        <input class="item-choice__checkbox" type="checkbox" id="unisex" name="unisex"
+                                            data-filter-category="sex" data-filter-value="3" />
                                         <label class="item-choice__label" for="unisex">Универсальный</label>
                                     </div>
                                 </details>
@@ -290,32 +293,32 @@
                                     </summary>
                                     <div class="item-choice">
                                         <input class="item-choice__checkbox" type="checkbox" id="set_trousers"
-                                            name="set_trousers" />
+                                            name="set_trousers" data-filter-category="set" data-filter-value="1"/>
                                         <label class="item-choice__label" for="set_trousers">Брюки</label>
                                     </div>
                                     <div class="item-choice">
                                         <input class="item-choice__checkbox" type="checkbox" id="set_vest"
-                                            name="set_vest" />
+                                            name="set_vest" data-filter-category="set" data-filter-value="2"/>
                                         <label class="item-choice__label" for="set_vest">Жилет</label>
                                     </div>
                                     <div class="item-choice">
                                         <input class="item-choice__checkbox" type="checkbox" id="set_costume"
-                                            name="set_costume" />
+                                            name="set_costume" data-filter-category="set" data-filter-value="3"/>
                                         <label class="item-choice__label" for="set_costume">Костюм</label>
                                     </div>
                                     <div class="item-choice">
                                         <input class="item-choice__checkbox" type="checkbox" id="set_jacket"
-                                            name="set_jacket" />
+                                            name="set_jacket" data-filter-category="set" data-filter-value="4"/>
                                         <label class="item-choice__label" for="set_jacket">Куртка</label>
                                     </div>
                                     <div class="item-choice">
                                         <input class="item-choice__checkbox" type="checkbox" id="set_overalls"
-                                            name="set_overalls" />
+                                            name="set_overalls" data-filter-category="set" data-filter-value="5"/>
                                         <label class="item-choice__label" for="set_overalls">Полукомбинезон</label>
                                     </div>
                                     <div class="item-choice">
                                         <input class="item-choice__checkbox" type="checkbox" id="set_overalls_2"
-                                            name="set_overalls_2" />
+                                            name="set_overalls_2" data-filter-category="set" data-filter-value="6"/>
                                         <label class="item-choice__label" for="set_overalls_2">Полукомбинезон</label>
                                     </div>
                                 </details>
@@ -331,27 +334,27 @@
                                     </summary>
                                     <div class="item-choice">
                                         <input class="item-choice__checkbox" type="checkbox" id="textile_trousers"
-                                            name="textile_trousers" />
+                                            name="textile_trousers" data-filter-category="textile" data-filter-value="1"/>
                                         <label class="item-choice__label" for="textile_trousers">Брюки</label>
                                     </div>
                                     <div class="item-choice">
                                         <input class="item-choice__checkbox" type="checkbox" id="textile_vest"
-                                            name="textile_vest" />
+                                            name="textile_vest" data-filter-category="textile" data-filter-value="2"/>
                                         <label class="item-choice__label" for="textile_vest">Жилет</label>
                                     </div>
                                     <div class="item-choice">
                                         <input class="item-choice__checkbox" type="checkbox" id="textile_costume"
-                                            name="textile_costume" />
+                                            name="textile_costume" data-filter-category="textile" data-filter-value="3"/>
                                         <label class="item-choice__label" for="textile_costume">Костюм</label>
                                     </div>
                                     <div class="item-choice">
                                         <input class="item-choice__checkbox" type="checkbox" id="textile_jacket"
-                                            name="textile_jacket" />
+                                            name="textile_jacket" data-filter-category="textile" data-filter-value="4"/>
                                         <label class="item-choice__label" for="textile_jacket">Куртка</label>
                                     </div>
                                     <div class="item-choice">
                                         <input class="item-choice__checkbox" type="checkbox" id="textile_overalls"
-                                            name="textile_overalls" />
+                                            name="textile_overalls" data-filter-category="textile" data-filter-value="5"/>
                                         <label class="item-choice__label" for="textile_overalls">Полукомбинезон</label>
                                     </div>
                                 </details>
@@ -367,28 +370,29 @@
                                     </summary>
                                     <div class="item-choice">
                                         <input class="item-choice__checkbox" type="checkbox" id="insulation_trousers"
-                                            name="insulation_trousers" />
+                                            name="insulation_trousers" data-filter-category="insulation" data-filter-value="1"/>
                                         <label class="item-choice__label" for="insulation_trousers">Брюки</label>
                                     </div>
                                     <div class="item-choice">
                                         <input class="item-choice__checkbox" type="checkbox" id="insulation_vest"
-                                            name="insulation_vest" />
+                                            name="insulation_vest" data-filter-category="insulation" data-filter-value="2"/>
                                         <label class="item-choice__label" for="insulation_vest">Жилет</label>
                                     </div>
                                     <div class="item-choice">
                                         <input class="item-choice__checkbox" type="checkbox" id="insulation_costume"
-                                            name="insulation_costume" />
+                                            name="insulation_costume" data-filter-category="insulation" data-filter-value="3"/>
                                         <label class="item-choice__label" for="insulation_costume">Костюм</label>
                                     </div>
                                     <div class="item-choice">
                                         <input class="item-choice__checkbox" type="checkbox" id="insulation_jacket"
-                                            name="insulation_jacket" />
+                                            name="insulation_jacket" data-filter-category="insulation" data-filter-value="4"/>
                                         <label class="item-choice__label" for="insulation_jacket">Куртка</label>
                                     </div>
                                     <div class="item-choice">
                                         <input class="item-choice__checkbox" type="checkbox" id="insulation_overalls"
-                                            name="insulation_overalls" />
-                                        <label class="item-choice__label" for="insulation_overalls">Полукомбинезон</label>
+                                            name="insulation_overalls" data-filter-category="insulation" data-filter-value="5"/>
+                                        <label class="item-choice__label"
+                                            for="insulation_overalls">Полукомбинезон</label>
                                     </div>
                                 </details>
                             </div>
@@ -403,17 +407,17 @@
                                     </summary>
                                     <div class="item-choice">
                                         <input class="item-choice__checkbox" type="checkbox" id="purpose_trousers"
-                                            name="purpose_trousers" />
+                                            name="purpose_trousers" data-filter-category="purpose" data-filter-value="1"/>
                                         <label class="item-choice__label" for="purpose_trousers">Брюки</label>
                                     </div>
                                     <div class="item-choice">
                                         <input class="item-choice__checkbox" type="checkbox" id="purpose_vest"
-                                            name="purpose_vest" />
+                                            name="purpose_vest" data-filter-category="purpose" data-filter-value="2"/>
                                         <label class="item-choice__label" for="purpose_vest">Жилет</label>
                                     </div>
                                     <div class="item-choice">
                                         <input class="item-choice__checkbox" type="checkbox" id="purpose_costume"
-                                            name="purpose_costume" />
+                                            name="purpose_costume" data-filter-category="purpose" data-filter-value="3"/>
                                         <label class="item-choice__label" for="purpose_costume">Костюм</label>
                                     </div>
                                 </details>
@@ -429,58 +433,58 @@
                                     </summary>
                                     <div class="item-choice">
                                         <input class="item-choice__checkbox" type="checkbox" id="turquoise_color"
-                                            name="turquoise_color" />
+                                            name="turquoise_color" data-filter-category="color" data-filter-value="1"/>
                                         <label class="item-choice__label" for="turquoise_color">Бирюзовый</label>
                                     </div>
                                     <div class="item-choice">
                                         <input class="item-choice__checkbox" type="checkbox" id="cornflower_color"
-                                            name="cornflower_color" />
+                                            name="cornflower_color" data-filter-category="color" data-filter-value="2"/>
                                         <label class="item-choice__label" for="cornflower_color">Васильковый</label>
                                     </div>
                                     <div class="item-choice">
                                         <input class="item-choice__checkbox" type="checkbox" id="red_color"
-                                            name="red_color" />
+                                            name="red_color" data-filter-category="color" data-filter-value="3"/>
                                         <label class="item-choice__label" for="red_color">Красный</label>
                                     </div>
                                     <div class="item-choice">
                                         <input class="item-choice__checkbox" type="checkbox" id="citric_color"
-                                            name="citric_color" />
+                                            name="citric_color" data-filter-category="color" data-filter-value="4"/>
                                         <label class="item-choice__label" for="citric_color">Лимонный</label>
                                     </div>
                                     <div class="item-choice">
                                         <input class="item-choice__checkbox" type="checkbox" id="olive_color"
-                                            name="olive_color" />
+                                            name="olive_color" data-filter-category="color" data-filter-value="5"/>
                                         <label class="item-choice__label" for="olive_color">Олива</label>
                                     </div>
                                     <div class="item-choice">
                                         <input class="item-choice__checkbox" type="checkbox" id="orange_color"
-                                            name="orange_color" />
+                                            name="orange_color" data-filter-category="color" data-filter-value="6"/>
                                         <label class="item-choice__label" for="orange_color">Оранжевый</label>
                                     </div>
                                     <div class="item-choice">
                                         <input class="item-choice__checkbox" type="checkbox" id="grey_color"
-                                            name="grey_color" />
+                                            name="grey_color" data-filter-category="color" data-filter-value="7"/>
                                         <label class="item-choice__label" for="grey_color">Серый</label>
                                     </div>
                                     <div class="item-choice">
                                         <input class="item-choice__checkbox" type="checkbox" id="blue_color"
-                                            name="blue_color" />
+                                            name="blue_color" data-filter-category="color" data-filter-value="8"/>
                                         <label class="item-choice__label" for="blue_color">Синий</label>
                                     </div>
                                     <div class="item-choice">
                                         <input class="item-choice__checkbox" type="checkbox" id="black_red_color"
-                                            name="black_red_color" />
+                                            name="black_red_color" data-filter-category="color" data-filter-value="9"/>
                                         <label class="item-choice__label" for="black_red_color">Черный, красный</label>
                                     </div>
                                     <div class="item-choice">
                                         <input class="item-choice__checkbox" type="checkbox" id="black_color"
-                                            name="black_color" />
+                                            name="black_color" data-filter-category="color" data-filter-value="10"/>
                                         <label class="item-choice__label" for="black_color">Черный</label>
                                     </div>
                                 </details>
                             </div>
                             <div class="filters-sidebar__buttons">
-                                <button class="btn btn-see-all">Показать (123)</button>
+                                <button class="btn btn-see-all">Показать (<span id="filter_result_amount"></span>)</button>
                                 <button class="btn btn-reset-filters">Сбросить</button>
                             </div>
                         </div>
@@ -505,318 +509,6 @@
                                     <button class="btn btn__add-to-wishlist">
                                         <svg class="like" width="20" height="20" viewBox="0 0 20 20" fill="transparent">
                                             <use class="like-use" xlink:href="images/svg/icon-like.svg#like"></use>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="catalog-card">
-                                <img class="catalog-card__img" src="images/man-costume-khaki.webp"
-                                    alt="мужской костюм" />
-                                <div class="catalog-card__code">Арт 1232425</div>
-                                <div class="catalog-card__name">Костюм "СИРИУС-Горка" куртка, брюки (гражданские
-                                    размеры) КМФ
-                                    Мультикам</div>
-                                <div class="catalog-card__price">
-                                    <div class="price-wholesale">Опт 3144 ₽</div>
-                                    <div class="price-retail">Розница 4235 ₽</div>
-                                </div>
-                                <div class="catalog-card__btns">
-                                    <button class="btn btn__add-to-cart" data-modal-onclick="select_options">В
-                                        корзину</button>
-                                    <button class="btn btn__add-to-wishlist">
-                                        <svg class="like" width="20" height="20" viewBox="0 0 20 20" fill="transparent">
-                                            <use xlink:href="images/svg/icon-like.svg#like"></use>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="catalog-card">
-                                <img class="catalog-card__img" src="images/man-costume-dark.webp"
-                                    alt="мужской костюм" />
-                                <div class="catalog-card__code">Арт 1232425</div>
-                                <div class="catalog-card__name">Костюм "СИРИУС-Горка" куртка, брюки (гражданские
-                                    размеры) КМФ
-                                    Мультикам</div>
-                                <div class="catalog-card__price">
-                                    <div class="price-wholesale">Опт 3144 ₽</div>
-                                    <div class="price-retail">Розница 4235 ₽</div>
-                                </div>
-                                <div class="catalog-card__btns">
-                                    <button class="btn btn__add-to-cart" data-modal-onclick="select_options">В
-                                        корзину</button>
-                                    <button class="btn btn__add-to-wishlist">
-                                        <svg class="like" width="20" height="20" viewBox="0 0 20 20" fill="transparent">
-                                            <use xlink:href="images/svg/icon-like.svg#like"></use>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="catalog-card">
-                                <img class="catalog-card__img" src="images/women-costume.webp"
-                                    alt="женский мед костюм" />
-                                <div class="catalog-card__code">Арт 1232425</div>
-                                <div class="catalog-card__name">Костюм "СИРИУС-Горка" куртка, брюки (гражданские
-                                    размеры) КМФ
-                                    Мультикам</div>
-                                <div class="catalog-card__price">
-                                    <div class="price-wholesale">Опт 3144 ₽</div>
-                                    <div class="price-retail">Розница 4235 ₽</div>
-                                </div>
-                                <div class="catalog-card__btns">
-                                    <button class="btn btn__add-to-cart" data-modal-onclick="select_options">В
-                                        корзину</button>
-                                    <button class="btn btn__add-to-wishlist">
-                                        <svg class="like" width="20" height="20" viewBox="0 0 20 20" fill="transparent">
-                                            <use xlink:href="images/svg/icon-like.svg#like"></use>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="catalog-card">
-                                <img class="catalog-card__img" src="images/man-costume-red.webp" alt="мужской костюм" />
-                                <div class="catalog-card__code">Арт 1232425</div>
-                                <div class="catalog-card__name">Костюм "СИРИУС-Горка" куртка, брюки (гражданские
-                                    размеры) КМФ
-                                    Мультикам</div>
-                                <div class="catalog-card__price">
-                                    <div class="price-wholesale">Опт 3144 ₽</div>
-                                    <div class="price-retail">Розница 4235 ₽</div>
-                                </div>
-                                <div class="catalog-card__btns">
-                                    <button class="btn btn__add-to-cart" data-modal-onclick="select_options">В
-                                        корзину</button>
-                                    <button class="btn btn__add-to-wishlist">
-                                        <svg class="like" width="20" height="20" viewBox="0 0 20 20" fill="transparent">
-                                            <use xlink:href="images/svg/icon-like.svg#like"></use>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="catalog-card">
-                                <img class="catalog-card__img" src="images/man-costume-khaki.webp"
-                                    alt="мужской костюм" />
-                                <div class="catalog-card__code">Арт 1232425</div>
-                                <div class="catalog-card__name">Костюм "СИРИУС-Горка" куртка, брюки (гражданские
-                                    размеры) КМФ
-                                    Мультикам</div>
-                                <div class="catalog-card__price">
-                                    <div class="price-wholesale">Опт 3144 ₽</div>
-                                    <div class="price-retail">Розница 4235 ₽</div>
-                                </div>
-                                <div class="catalog-card__btns">
-                                    <button class="btn btn__add-to-cart" data-modal-onclick="select_options">В
-                                        корзину</button>
-                                    <button class="btn btn__add-to-wishlist">
-                                        <svg class="like" width="20" height="20" viewBox="0 0 20 20" fill="transparent">
-                                            <use xlink:href="images/svg/icon-like.svg#like"></use>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="catalog-card">
-                                <img class="catalog-card__img" src="images/man-costume-dark.webp"
-                                    alt="мужской костюм" />
-                                <div class="catalog-card__code">Арт 1232425</div>
-                                <div class="catalog-card__name">Костюм "СИРИУС-Горка" куртка, брюки (гражданские
-                                    размеры) КМФ
-                                    Мультикам</div>
-                                <div class="catalog-card__price">
-                                    <div class="price-wholesale">Опт 3144 ₽</div>
-                                    <div class="price-retail">Розница 4235 ₽</div>
-                                </div>
-                                <div class="catalog-card__btns">
-                                    <button class="btn btn__add-to-cart" data-modal-onclick="select_options">В
-                                        корзину</button>
-                                    <button class="btn btn__add-to-wishlist">
-                                        <svg class="like" width="20" height="20" viewBox="0 0 20 20" fill="transparent">
-                                            <use xlink:href="images/svg/icon-like.svg#like"></use>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="catalog-card">
-                                <img class="catalog-card__img" src="images/women-costume.webp"
-                                    alt="женский мед костюм" />
-                                <div class="catalog-card__code">Арт 1232425</div>
-                                <div class="catalog-card__name">Костюм "СИРИУС-Горка" куртка, брюки (гражданские
-                                    размеры) КМФ
-                                    Мультикам</div>
-                                <div class="catalog-card__price">
-                                    <div class="price-wholesale">Опт 3144 ₽</div>
-                                    <div class="price-retail">Розница 4235 ₽</div>
-                                </div>
-                                <div class="catalog-card__btns">
-                                    <button class="btn btn__add-to-cart" data-modal-onclick="select_options">В
-                                        корзину</button>
-                                    <button class="btn btn__add-to-wishlist">
-                                        <svg class="like" width="20" height="20" viewBox="0 0 20 20" fill="transparent">
-                                            <use xlink:href="images/svg/icon-like.svg#like"></use>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="catalog-card">
-                                <img class="catalog-card__img" src="images/man-costume-red.webp" alt="мужской костюм" />
-                                <div class="catalog-card__code">Арт 1232425</div>
-                                <div class="catalog-card__name">Костюм "СИРИУС-Горка" куртка, брюки (гражданские
-                                    размеры) КМФ
-                                    Мультикам</div>
-                                <div class="catalog-card__price">
-                                    <div class="price-wholesale">Опт 3144 ₽</div>
-                                    <div class="price-retail">Розница 4235 ₽</div>
-                                </div>
-                                <div class="catalog-card__btns">
-                                    <button class="btn btn__add-to-cart" data-modal-onclick="select_options">В
-                                        корзину</button>
-                                    <button class="btn btn__add-to-wishlist">
-                                        <svg class="like" width="20" height="20" viewBox="0 0 20 20" fill="transparent">
-                                            <use xlink:href="images/svg/icon-like.svg#like"></use>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="catalog-card">
-                                <img class="catalog-card__img" src="images/man-costume-khaki.webp"
-                                    alt="мужской костюм" />
-                                <div class="catalog-card__code">Арт 1232425</div>
-                                <div class="catalog-card__name">Костюм "СИРИУС-Горка" куртка, брюки (гражданские
-                                    размеры) КМФ
-                                    Мультикам</div>
-                                <div class="catalog-card__price">
-                                    <div class="price-wholesale">Опт 3144 ₽</div>
-                                    <div class="price-retail">Розница 4235 ₽</div>
-                                </div>
-                                <div class="catalog-card__btns">
-                                    <button class="btn btn__add-to-cart" data-modal-onclick="select_options">В
-                                        корзину</button>
-                                    <button class="btn btn__add-to-wishlist">
-                                        <svg class="like" width="20" height="20" viewBox="0 0 20 20" fill="transparent">
-                                            <use xlink:href="images/svg/icon-like.svg#like"></use>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="catalog-card">
-                                <img class="catalog-card__img" src="images/man-costume-dark.webp"
-                                    alt="мужской костюм" />
-                                <div class="catalog-card__code">Арт 1232425</div>
-                                <div class="catalog-card__name">Костюм "СИРИУС-Горка" куртка, брюки (гражданские
-                                    размеры) КМФ
-                                    Мультикам</div>
-                                <div class="catalog-card__price">
-                                    <div class="price-wholesale">Опт 3144 ₽</div>
-                                    <div class="price-retail">Розница 4235 ₽</div>
-                                </div>
-                                <div class="catalog-card__btns">
-                                    <button class="btn btn__add-to-cart" data-modal-onclick="select_options">В
-                                        корзину</button>
-                                    <button class="btn btn__add-to-wishlist">
-                                        <svg class="like" width="20" height="20" viewBox="0 0 20 20" fill="transparent">
-                                            <use xlink:href="images/svg/icon-like.svg#like"></use>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="catalog-card">
-                                <img class="catalog-card__img" src="images/women-costume.webp"
-                                    alt="женский мед костюм" />
-                                <div class="catalog-card__code">Арт 1232425</div>
-                                <div class="catalog-card__name">Костюм "СИРИУС-Горка" куртка, брюки (гражданские
-                                    размеры) КМФ
-                                    Мультикам</div>
-                                <div class="catalog-card__price">
-                                    <div class="price-wholesale">Опт 3144 ₽</div>
-                                    <div class="price-retail">Розница 4235 ₽</div>
-                                </div>
-                                <div class="catalog-card__btns">
-                                    <button class="btn btn__add-to-cart" data-modal-onclick="select_options">В
-                                        корзину</button>
-                                    <button class="btn btn__add-to-wishlist">
-                                        <svg class="like" width="20" height="20" viewBox="0 0 20 20" fill="transparent">
-                                            <use xlink:href="images/svg/icon-like.svg#like"></use>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="catalog-card">
-                                <img class="catalog-card__img" src="images/man-costume-red.webp" alt="мужской костюм" />
-                                <div class="catalog-card__code">Арт 1232425</div>
-                                <div class="catalog-card__name">Костюм "СИРИУС-Горка" куртка, брюки (гражданские
-                                    размеры) КМФ
-                                    Мультикам</div>
-                                <div class="catalog-card__price">
-                                    <div class="price-wholesale">Опт 3144 ₽</div>
-                                    <div class="price-retail">Розница 4235 ₽</div>
-                                </div>
-                                <div class="catalog-card__btns">
-                                    <button class="btn btn__add-to-cart" data-modal-onclick="select_options">В
-                                        корзину</button>
-                                    <button class="btn btn__add-to-wishlist">
-                                        <svg class="like" width="20" height="20" viewBox="0 0 20 20" fill="transparent">
-                                            <use xlink:href="images/svg/icon-like.svg#like"></use>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="catalog-card">
-                                <img class="catalog-card__img" src="images/man-costume-khaki.webp"
-                                    alt="мужской костюм" />
-                                <div class="catalog-card__code">Арт 1232425</div>
-                                <div class="catalog-card__name">Костюм "СИРИУС-Горка" куртка, брюки (гражданские
-                                    размеры) КМФ
-                                    Мультикам</div>
-                                <div class="catalog-card__price">
-                                    <div class="price-wholesale">Опт 3144 ₽</div>
-                                    <div class="price-retail">Розница 4235 ₽</div>
-                                </div>
-                                <div class="catalog-card__btns">
-                                    <button class="btn btn__add-to-cart" data-modal-onclick="select_options">В
-                                        корзину</button>
-                                    <button class="btn btn__add-to-wishlist">
-                                        <svg class="like" width="20" height="20" viewBox="0 0 20 20" fill="transparent">
-                                            <use xlink:href="images/svg/icon-like.svg#like"></use>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="catalog-card">
-                                <img class="catalog-card__img" src="images/man-costume-dark.webp"
-                                    alt="мужской костюм" />
-                                <div class="catalog-card__code">Арт 1232425</div>
-                                <div class="catalog-card__name">Костюм "СИРИУС-Горка" куртка, брюки (гражданские
-                                    размеры) КМФ
-                                    Мультикам</div>
-                                <div class="catalog-card__price">
-                                    <div class="price-wholesale">Опт 3144 ₽</div>
-                                    <div class="price-retail">Розница 4235 ₽</div>
-                                </div>
-                                <div class="catalog-card__btns">
-                                    <button class="btn btn__add-to-cart" data-modal-onclick="select_options">В
-                                        корзину</button>
-                                    <button class="btn btn__add-to-wishlist">
-                                        <svg class="like" width="20" height="20" viewBox="0 0 20 20" fill="transparent">
-                                            <use xlink:href="images/svg/icon-like.svg#like"></use>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="catalog-card">
-                                <img class="catalog-card__img" src="images/women-costume.webp"
-                                    alt="женский мед костюм" />
-                                <div class="catalog-card__code">Арт 1232425</div>
-                                <div class="catalog-card__name">Костюм "СИРИУС-Горка" куртка, брюки (гражданские
-                                    размеры) КМФ
-                                    Мультикам</div>
-                                <div class="catalog-card__price">
-                                    <div class="price-wholesale">Опт 3144 ₽</div>
-                                    <div class="price-retail">Розница 4235 ₽</div>
-                                </div>
-                                <div class="catalog-card__btns">
-                                    <button class="btn btn__add-to-cart" data-modal-onclick="select_options">В
-                                        корзину</button>
-                                    <button class="btn btn__add-to-wishlist">
-                                        <svg class="like" width="20" height="20" viewBox="0 0 20 20" fill="transparent">
-                                            <use xlink:href="images/svg/icon-like.svg#like"></use>
                                         </svg>
                                     </button>
                                 </div>
@@ -976,13 +668,16 @@
         </div>
     </div>
 
-    <script type="text/javascript" src="main.js"></script>
-    <script type="text/javascript" src="select-custom.js"></script>
-    <script type="text/javascript" src="modal.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/range-price-slider.js"></script>
+    <script type="text/javascript" src="js/select-custom.js"></script>
+    <script type="text/javascript" src="js/modal.js"></script>
 
-    <script type="text/javascript" src="catalog-data.js"></script>
-    <script type="text/javascript" src="template.js"></script>
-    <script type="text/javascript" src="catalog.js"></script>
+    <script type="text/javascript" src="js/catalog-data.js"></script>
+    <script type="text/javascript" src="js/template.js"></script>
+    <script type="text/javascript" src="js/catalog.js"></script>
+    <script type="text/javascript" src="js/filter.js"></script>
+
 
 </body>
 

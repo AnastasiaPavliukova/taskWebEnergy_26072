@@ -471,7 +471,7 @@ body {
   width: 100%;
   height: auto;
 }
-.catalog-card__article {
+.catalog-card__code {
   font-size: 14px;
   line-height: 18px;
   color: #A0A4A8;
@@ -666,7 +666,6 @@ body {
     right: 0;
     bottom: 0;
     align-items: center;
-    flex: initial;
   }
   .filters-sidebar__overlay {
     display: flex;
@@ -681,9 +680,6 @@ body {
     align-items: center;
     gap: 10px;
     margin-bottom: 32px;
-  }
-  .filters-sidebar__back {
-    cursor: pointer;
   }
   .filters-sidebar__btn-close {
     width: 52px;
@@ -1464,6 +1460,9 @@ input[type=range] {
     width: 100%;
     order: 3;
     padding: 0 10px;
+  }
+  .footer-privacy {
+    padding: 30px 10px 38px;
   }
 }
 body {
