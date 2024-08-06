@@ -14,7 +14,7 @@
 .filters-sidebar {
 
     &__wrapper {
-        display: block;
+        display: flex !important;
         position: initial;
     }
 
