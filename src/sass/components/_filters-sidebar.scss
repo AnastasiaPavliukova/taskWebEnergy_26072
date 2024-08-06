@@ -14,7 +14,7 @@
 .filters-sidebar {
 
     &__wrapper {
-        display: flex !important;
+        display: block;
         position: initial;
     }
 
@@ -137,7 +137,6 @@
             right: 0;
             bottom: 0;
             align-items: center;
-            flex: initial;
         }
 
         &__overlay {
@@ -154,10 +153,6 @@
             align-items: center;
             gap: 10px;
             margin-bottom: 32px;
-        }
-
-        &__back {
-            cursor: pointer;
         }
 
         &__btn-close {
