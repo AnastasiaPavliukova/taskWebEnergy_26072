@@ -49,6 +49,53 @@
     }
 }
 
+.pagination {
+    width: 276px;
+    height: 24px;
+    margin: 30px auto 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pagination {
+
+    &__btn {
+        cursor: pointer;
+    }
+
+    &__prev-arrow {
+        transform: rotate(180deg);
+    }
+
+    &__number {
+        width: 24px;
+        height: 24px;
+        font-size: 16px;
+        line-height: 130%;
+        color: vars.$dark-text-color;
+        background: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    &__number.active {
+        border-radius: 2px;
+        background: vars.$accent-red-color;
+        color: vars.$white-color;
+    }
+
+    &__number.empty {
+        color: vars.$light-grey-color;
+    }
+
+    &__number-all {
+        color: vars.$accent-red-color;
+    }
+}
+
 
 @media screen and (max-width: 1300px) {
     .catalog {

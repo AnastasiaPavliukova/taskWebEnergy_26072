@@ -74,6 +74,11 @@
         line-height: 130%;
         color: vars.$light-grey-color;
         text-transform: uppercase;
+        transition: all 0.3s ease;
+    }
+
+    &__links-item:hover {
+        color: vars.$btn-grey-color;
     }
 
     &__links-item-red {

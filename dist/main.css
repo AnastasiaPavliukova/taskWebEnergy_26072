@@ -140,6 +140,7 @@ sup {
  */
 img {
   border-style: none;
+  display: block;
 }
 
 /* Forms
@@ -457,6 +458,7 @@ body {
 }
 
 .catalog-card {
+  max-width: 300px;
   padding: 1.25rem;
   border-top: 1px solid #E8E8E8;
   border-right: 1px solid #E8E8E8;
@@ -533,6 +535,10 @@ body {
 .btn__add-to-wishlist:hover {
   background: #E93C3C;
   border: 1px solid #EB4747;
+}
+
+.btn__add-to-wishlist:hover > .like > path {
+  stroke: #fff;
 }
 
 @media screen and (max-width: 1300px) {
@@ -1271,6 +1277,45 @@ input[type=range] {
   width: 100%;
 }
 
+.pagination {
+  width: 276px;
+  height: 24px;
+  margin: 30px auto 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pagination__btn {
+  cursor: pointer;
+}
+.pagination__prev-arrow {
+  transform: rotate(180deg);
+}
+.pagination__number {
+  width: 24px;
+  height: 24px;
+  font-size: 16px;
+  line-height: 130%;
+  color: #25282B;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.pagination__number.active {
+  border-radius: 2px;
+  background: #E93C3C;
+  color: #fff;
+}
+.pagination__number.empty {
+  color: #A0A4A8;
+}
+.pagination__number-all {
+  color: #E93C3C;
+}
+
 @media screen and (max-width: 1300px) {
   .catalog__filters {
     width: 100%;
@@ -1354,6 +1399,10 @@ input[type=range] {
   line-height: 130%;
   color: #A0A4A8;
   text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+.footer__links-item:hover {
+  color: #52575C;
 }
 .footer__links-item-red {
   color: #E93C3C;
