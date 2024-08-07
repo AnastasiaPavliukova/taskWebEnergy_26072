@@ -1,3 +1,7 @@
+import { updateSliderRender } from "../libs/range-price-slider.mjs";
+import { catalogData } from "./catalog-data.mjs";
+import { renderCatalog } from "./catalog.mjs";
+
 let actualFilter = {
     price: {
         min: 0,
@@ -73,7 +77,6 @@ function filterCards(data, filter) {
                 }
                 continue;
             }
-
             if (filter[key].size > 0 && !filter[key].has(item[key])) {
                 return false;
             }
@@ -100,7 +103,30 @@ document.querySelector('.btn-reset-filters').addEventListener('click', () => {
     rangePriceMaxInput.value = rangePriceMaxInput.max;
     rangePriceMinSlider.value = rangePriceMinSlider.min;
     rangePriceMaxSlider.value = rangePriceMaxSlider.max;
-
+    updateSliderRender();
     updateFilterResultAmount();
 })
 
+/* ========== catalog filters open for mobile ========== */
+
+const filtersOpenBtn = document.getElementById('catalog_filters_btn');
+const filtersSidebar = document.getElementById('filters_sidebar');
+const filtersCloseBtn = document.getElementById('filters_close');
+const filtersOpenOverlay = document.querySelector('.filters-sidebar__overlay');
+const filtersBackBtn = document.querySelector('.filters-sidebar__back');
+
+filtersOpenBtn.addEventListener('click', () => {
+    filtersSidebar.style.display = 'flex';
+});
+
+filtersCloseBtn.addEventListener('click', () => {
+    filtersSidebar.style.display = 'none';
+});
+
+filtersOpenOverlay.addEventListener('click', () => {
+    filtersSidebar.style.display = 'none';
+});
+
+filtersBackBtn.addEventListener('click', () => {
+    filtersSidebar.style.display = 'none';
+});

@@ -78,7 +78,7 @@ const fromSlider = document.querySelector('#fromSlider');
 const toSlider = document.querySelector('#toSlider');
 const fromInput = document.querySelector('#fromInput');
 const toInput = document.querySelector('#toInput');
-function updateSliderRender() {
+export function updateSliderRender() {
     fillSlider(fromSlider, toSlider, '#CACCCF', '#FF6262', toSlider);
 }
 updateSliderRender();

@@ -8,7 +8,7 @@ function closeActiveModal() {
     }
 }
 
-function showModal(modalId) {
+export function showModal(modalId) {
     closeActiveModal();
     const modalToOpen = document.getElementById(modalId);
     if (!modalToOpen) {
@@ -20,5 +20,4 @@ function showModal(modalId) {
 }
 
 modalcloseBtn.addEventListener('click', closeActiveModal);
-
 modalBg.addEventListener('click', closeActiveModal);

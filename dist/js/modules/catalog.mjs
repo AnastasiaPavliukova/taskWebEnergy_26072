@@ -1,11 +1,13 @@
+import { catalogData } from "./catalog-data.mjs";
+import { showModal } from "./modal.mjs";
+import { fillCard } from "./template.mjs";
+
 const cardTemplate = document.querySelector('.catalog-card').cloneNode(true);
 const cardsRoot = document.querySelector('.catalog-cards');
-
 const catalogSort = document.getElementById('catalog_sort');
-
 const defaultSort = 'price-acsending';
-let actualSort = '';
 
+let actualSort = '';
 let actualCardsData;
 
 const sortFunctions = {
@@ -27,7 +29,7 @@ function sortCardsData(cardsData) {
     cardsData.sort(sortFunction);
 }
 
-function renderCatalog(cardsData) {
+export function renderCatalog(cardsData) {
     actualCardsData = cardsData;
 
     sortCardsData(cardsData);
@@ -37,7 +39,6 @@ function renderCatalog(cardsData) {
     for (const cardData of cardsData) {
 
         const newCard = cardTemplate.cloneNode(true);
-
         fillCard(newCard, cardData);
         newCards.push(newCard);
     }
