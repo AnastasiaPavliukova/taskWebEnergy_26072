@@ -22,11 +22,3 @@ function showModal(modalId) {
 modalcloseBtn.addEventListener('click', closeActiveModal);
 
 modalBg.addEventListener('click', closeActiveModal);
-
-const modalOpenBtns = document.querySelectorAll('[data-modal-onclick]');
-
-modalOpenBtns.forEach((btn) => {
-    btn.addEventListener('click', () => {
-        showModal(btn.dataset.modalOnclick);
-    })
-})
